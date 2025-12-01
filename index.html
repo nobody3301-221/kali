@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ツールまとめサイト</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <h1>ツールまとめサイト</h1>
+
+  <!-- 時計 -->
+  <section id="clock-section">
+    <h2>時計</h2>
+    <div id="clock"></div>
+  </section>
+
+  <!-- カレンダー -->
+  <section id="calendar-section">
+    <h2>カレンダー（タスク管理）</h2>
+    <div id="calendar"></div>
+    <div id="task-area">
+      <input type="text" id="taskInput" placeholder="タスクを入力">
+      <button onclick="addTask()">追加</button>
+    </div>
+    <div id="taskList"></div>
+  </section>
+
+  <!-- 電卓 -->
+  <section id="calculator-section">
+    <h2>電卓</h2>
+    <div id="calculator">
+      <input type="text" id="calcDisplay" disabled>
+      <div>
+        <button onclick="appendNumber('1')">1</button>
+        <button onclick="appendNumber('2')">2</button>
+        <button onclick="appendNumber('3')">3</button>
+        <button onclick="appendNumber('+')">+</button>
+      </div>
+      <div>
+        <button onclick="appendNumber('4')">4</button>
+        <button onclick="appendNumber('5')">5</button>
+        <button onclick="appendNumber('6')">6</button>
+        <button onclick="appendNumber('-')">-</button>
+      </div>
+      <div>
+        <button onclick="appendNumber('7')">7</button>
+        <button onclick="appendNumber('8')">8</button>
+        <button onclick="appendNumber('9')">9</button>
+        <button onclick="appendNumber('*')">*</button>
+      </div>
+      <div>
+        <button onclick="appendNumber('0')">0</button>
+        <button onclick="clearDisplay()">C</button>
+        <button onclick="calculateResult()">=</button>
+        <button onclick="appendNumber('/')">/</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- メモ -->
+  <section id="notes-section">
+    <h2>メモ</h2>
+    <div id="notes">
+      <textarea id="memoInput" placeholder="メモを入力"></textarea>
+      <button onclick="saveMemo()">保存</button>
+      <div id="savedMemo"></div>
+    </div>
+  </section>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
